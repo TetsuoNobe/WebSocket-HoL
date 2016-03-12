@@ -6,6 +6,7 @@
 package jp.co.oracle.websockets;
 
 import javax.ejb.EJB;
+import javax.inject.Inject;
 import javax.websocket.OnClose;
 import javax.websocket.OnOpen;
 import javax.websocket.Session;
@@ -20,7 +21,8 @@ import jp.co.oracle.ejbs.ClientManageSinglEJB;
 @ServerEndpoint("/infotrans")
 public class InfoTransServerEndpoint {
     
-   @EJB
+   //@EJB 
+   @Inject
    ClientManageSinglEJB clManager;
 
     @OnOpen
